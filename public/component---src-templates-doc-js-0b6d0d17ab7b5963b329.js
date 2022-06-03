@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{JyPR:function(e,t,n){"use strict";n.r(t);n("q1tI");var a=n("plkb"),r=n("Xua+"),c=n("qKvR");t.default=function(e){var t=e.data,n=t.markdownRemark.fields.slug,d=Object(r.b)(n);return"architecture"===n&&(d.prev="/docs/",d.prevTitle="Introduction"),Object(c.d)(a.a,{canonical:"/docs/"+t.markdownRemark.fields.slug+"/",context:d},Object(c.d)("div",{dangerouslySetInnerHTML:{__html:t.markdownRemark.html}}))}}}]);
+//# sourceMappingURL=component---src-templates-doc-js-0b6d0d17ab7b5963b329.js.map

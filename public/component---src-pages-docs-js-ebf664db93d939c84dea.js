@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{iaV1:function(t,e,n){"use strict";n.r(e);n("q1tI");var c=n("plkb"),a=n("qKvR");e.default=function(t){var e=t.data;return Object(a.d)(c.a,{canonical:"/docs/",context:{next:"/docs/architecture/",nextTitle:"Architecture Overview"}},Object(a.d)("div",{dangerouslySetInnerHTML:{__html:e.markdownRemark.html}}))}}}]);
+//# sourceMappingURL=component---src-pages-docs-js-ebf664db93d939c84dea.js.map
