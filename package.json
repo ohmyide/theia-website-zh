@@ -1,0 +1,48 @@
+{
+  "name": "Theia-Website",
+  "version": "0.1.0",
+  "author": "TypeFox",
+  "license": "EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "env-cmd -f .env.development gatsby develop --host=0.0.0.0",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "@types/react-helmet": "^5.0.9",
+    "env-cmd": "^10.0.1",
+    "gatsby": "^2.13.3",
+    "gatsby-plugin-emotion": "^4.1.0",
+    "gatsby-plugin-react-helmet": "^3.1.5",
+    "gatsby-remark-autolink-headers": "^4.0.0",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-remark-prismjs": "^3.4.5",
+    "gatsby-source-filesystem": "^2.1.9",
+    "gatsby-transformer-remark": "^2.7.5",
+    "prismjs": "^1.20.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-tweet-embed": "^1.2.2",
+    "react-twitter-embed": "^2.0.8",
+    "reactjs-popup": "^2.0.4",
+    "rss-parser": "^3.12.0",
+    "swiper": "^6.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

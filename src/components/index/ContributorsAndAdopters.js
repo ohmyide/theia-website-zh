@@ -1,0 +1,135 @@
+/********************************************************************************
+ * Copyright (C) 2020 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+import React, { useState, useEffect } from 'react'
+
+import styled from '@emotion/styled'
+import { contributorsAndAdopters } from '../../utils/data'
+import { breakpoints } from '../../utils/variables'
+
+const Styled = styled.div`
+     .contributors {
+        padding-bottom: 5rem;
+        margin-top: 4rem;
+
+        &__images {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+                @media(min-width: 768px) {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-row-gap: 80px;
+                }
+
+            @media(max-width: 50rem) {
+                text-align: center;
+            }
+        }
+
+        &__image {
+            height: 100%;
+            max-width: 14rem;
+            object-fit: contain;
+
+            &-container {
+                height: 4rem;
+
+                @media(min-width: 768px) {
+                    height: 4.5rem;
+                    text-align: center;
+                }
+
+                @media(max-width: 50rem) {
+                    width: 40%;
+                    margin-bottom: 4rem;
+                }
+
+                @media(max-width: 30rem) {
+                    width: 100%;
+                }
+            }
+
+            &--ericsson {
+                transform: scale(1.3);
+            }
+
+            &--ibm {
+                transform: scale(.8);
+            }
+
+            &--arm {
+                transform: scale(.5);
+            }
+
+            &--sap {
+                @media(min-width: ${breakpoints.md}) {
+                    transform: translateX(2.5rem);
+                }
+            }
+        }
+    }
+`
+
+const ContributorsAndAdopters = () => {
+
+    const [adopters, setAdopters] = useState(contributorsAndAdopters);
+
+    useEffect(() => {
+        const fetchAdopters = async () => {
+            const response = await fetch('https://api.eclipse.org/adopters/projects/ecd.theia', {
+                method: 'GET',
+                headers: {
+                  accept: 'application/json',
+                }
+            });
+            const json = await response.json();
+            let newAdopters = json[0].adopters.concat(adopters);
+            newAdopters.sort((a,b) => {
+                if (a.name.toUpperCase() < b.name.toUpperCase())
+                    return -1
+                else
+                    return 1
+            })
+            setAdopters(newAdopters);
+        }
+        fetchAdopters();
+    }, []);
+    
+    return (
+        <div className="row">
+            <Styled>
+                <section className="contributors" >
+                    <h3 className="heading-tertiary">贡献者和使用方</h3>
+                    <div className="contributors__images">
+                        {
+                            adopters.map((item, i) => (
+                                <div key={i} className="contributors__image-container">
+                                    <a target="_blank" rel="noopener noreferrer" href={item.homepage_url}>
+                                        <img className="contributors__image" src={(item.src) ? item.src : 'https://api.eclipse.org/adopters/assets/images/adopters/' + item.logo } alt={item.name} />
+                                    </a>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </section>
+            </Styled>
+        </div>
+    )
+}
+
+export default ContributorsAndAdopters
