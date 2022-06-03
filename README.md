@@ -1,8 +1,10 @@
 # Theia 中文官网
 
-http://theia.ohmyide.com/
+临时地址：http://theia.ohmyide.com/
 
-Source：https://github.com/eclipse-theia/theia-website
+Theia 官网：https://theia-ide.org/
+
+仓库：https://github.com/eclipse-theia/theia-website
 
 
 
