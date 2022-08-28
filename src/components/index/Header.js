@@ -98,7 +98,7 @@ const Header = () => (
                     <h2 style={{ fontSize: '2.1rem' }}>
                     使用现代 Web 技术，高效开发和交付的云端 & 桌面 IDE 工具链。
                         <br/>
-                        <a href="https://eclipsesource.com/blogs/2022/03/01/eclipse-theia-1-23-release-news-and-noteworthy/" rel="noopener noreferrer">了解最新 1.23 版本!</a>
+                        <a href="https://eclipsesource.com/blogs/2022/07/11/eclipse-theia-1-27-release-news-and-noteworthy/" rel="noopener noreferrer">了解最新 1.27 版本!</a>
                         <br/>
                         保持关注： <a href="https://twitter.com/theia_ide">官方推特</a> 并 <a href="https://accounts.eclipse.org/mailing-list/friends-of-theia">注册 “Theia和他的朋友们” 邮件列表</a>。
                     </h2>

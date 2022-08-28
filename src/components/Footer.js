@@ -73,6 +73,7 @@ const Footer = ({background}) => (
               | <a target="_blank" rel="noopener noreferrer" href=" http://www.eclipse.org/legal/termsofuse.php">使用条款</a>
                | <a target="_blank" rel="noopener noreferrer" href="http://www.eclipse.org/legal/copyright.php">版权代理</a></p>
             <p>© {(new Date()).getFullYear()} by <a href="https://www.eclipse.org/org/" target="_blank" rel="noopener">Eclipse 基金会</a></p>
+            <p>免责声明：<a href="https://theia-ide.org/" target="_blank" rel="noopener">Eclipse Theia 的官方文档是英文</a>，中文文档是基于开源贡献翻译，具体以官方英文文档为准。</p>
         </footer>
     </StyledFooter>
 )
